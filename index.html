@@ -1,138 +1,598 @@
-<html>
-	<head>
-		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />  
-		<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
-		<title>my Ielts listening</title> 
-	</head>
-	<style>
-		li {
-			height: 10em;
-			width: 100%;
-			border-bottom: 1px solid purple;
-		}
-	</style>
-	<body>
-		<ul>
-			<li>
-				<label>C5 Test1</label>
-				<audio id="c5_1" controls>
-					<source src="./c5-1.mp3" type="audio/mp3">
-				</audio>
-			</li>
-			<li>
-				<label>C5 Test2</label>
-				<audio id="c5_2" controls>
-					<source src="./c5-2.mp3" type="audio/mp3">
-				</audio>
-			</li>
-			<li>
-				<label>C5 Test3</label>
-				<audio id="c5_3" controls>
-					<source src="./c5-3.mp3" type="audio/mp3">
-				</audio>
-			</li>
-			<li>
-				<label>C5 Test4</label>
-				<audio id="c5_4" controls>
-					<source src="./c5-4.mp3" type="audio/mp3">
-				</audio>
-			</li>
-			<li>
-				<label>C6 Test1</label>
-				<audio id="c6_1" controls>
-					<source src="./6-1.mp3" type="audio/mp3">
-				</audio>
-			</li>
-			<li>
-				<label>C6 Test2</label>
-				<audio id="c6_2" controls>
-					<source src="./6-2.mp3" type="audio/mp3">
-				</audio>
-			</li>
-			<li>
-				<label>C6 Test3</label>
-				<audio id="c6_3" controls>
-					<source src="./6-3.mp3" type="audio/mp3">
-				</audio>
-			</li>
-			<li>
-				<label>C6 Test4</label>
-				<audio id="c6_4" controls>
-					<source src="./6-4.mp3" type="audio/mp3">
-				</audio>
-			</li>
-			<li>
-				<label>C7 Test1</label>
-				<audio id="c7_1" controls>
-					<source src="./7-1.mp3" type="audio/mp3">
-				</audio>
-			</li>
-			<li>
-				<label>C7 Test2</label>
-				<audio id="c7_2" controls>
-					<source src="./7-2.mp3" type="audio/mp3">
-				</audio>
-			</li>
-			<li>
-				<label>C7 Test3</label>
-				<audio id="c7_3" controls>
-					<source src="./7-3.mp3" type="audio/mp3">
-				</audio>
-			</li>
-			<li>
-				<label>C7 Test4</label>
-				<audio id="c7_4" controls>
-					<source src="./7-4.mp3" type="audio/mp3">
-				</audio>
-			</li>
-			<li>
-				<label>C8 Test1</label>
-				<audio id="c8_1" controls>
-					<source src="./8-1.mp3" type="audio/mp3">
-				</audio>
-			</li>
-			<li>
-				<label>C8 Test2</label>
-				<audio id="c8_2" controls>
-					<source src="./8-2.mp3" type="audio/mp3">
-				</audio>
-			</li>
-			<li>
-				<label>C8 Test3</label>
-				<audio id="c8_3" controls>
-					<source src="./8-3.mp3" type="audio/mp3">
-				</audio>
-			</li>
-			<li>
-				<label>C8 Test4</label>
-				<audio id="c8_4" controls>
-					<source src="./8-4.mp3" type="audio/mp3">
-				</audio>
-			</li>
-			<li>
-				<label>C9 Test1</label>
-				<audio id="c9_1" controls>
-					<source src="./9-1.mp3" type="audio/mp3">
-				</audio>
-			</li>
-			<li>
-				<label>C9 Test2</label>
-				<audio id="c9_2" controls>
-					<source src="./9-2.mp3" type="audio/mp3">
-				</audio>
-			</li>
-			<li>
-				<label>C9 Test3</label>
-				<audio id="c9_3" controls>
-					<source src="./9-3.mp3" type="audio/mp3">
-				</audio>
-			</li>
-			<li>
-				<label>C9 Test4</label>
-				<audio id="c9_4" controls>
-					<source src="./9-4.mp3" type="audio/mp3">
-				</audio>
-			</li>
-		</ul>
-	</body>
+<!DOCTYPE html>
+<head>
+  <title>Listening records</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1, maximum-scale=1, user-scalable=no"/>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <link rel="apple-touch-icon" href="https://png.pngtree.com/element_origin_min_pic/16/09/19/2157dfe9cadda13.jpg">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<style>
+  body {
+    position: relative;
+  }
+  ul.nav-pills {
+    top: 20px;
+    position: fixed;
+  }
+  .navList {
+    width: 3em;
+  }
+  .navList ul .nav-item .nav-link {
+    color: white;
+  }
+  .navList ul .nav-item .active {
+    border-radius: 0px;
+    background-color: DarkOrange;
+    color: white;
+  }
+  .row {
+    padding: 0em 0em;
+    background-color: DimGrey;
+  }
+  .channels {
+    margin: 0em 0em 0em 6em;
+    width: 100%;
+  }
+  .channels div .section-headers {
+    background-color: DarkOrange;
+    color: white;
+    height: 15px;
+    font-size: 12px;
+    line-height: 15px;
+  }
+  .channelCard {
+    padding: 2px;
+  }
+  .card .imgDiv {
+    width: 100%;
+    text-align: center;
+    overflow-y: hidden;
+  }
+  .card .imgDiv img {
+    width: 100%;
+  }
+  .card-footer {
+    padding: 0px;
+    text-align: center;
+  }
+</style>
+</head>
+<body data-spy="scroll" data-target="#myScrollspy" data-offset="1">
+
+<div class="container-fluid">
+  <div class="row">
+    <nav class="navList" id="myScrollspy">
+      <ul class="nav nav-pills flex-column">
+        <li class="nav-item">
+          <a class="nav-link active" href="#section1">C5</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#section2">C6</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#section3">C7</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#section4">C8</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#section5">C9</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#section6">C10</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#section7">C11</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#section8">C12</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#section9">C13</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#section10">C14</a>
+        </li>
+        
+      </ul>
+    </nav>
+    <div class="channels">
+		<div id="section1" class="section">    
+			<div class="section1-header section-headers">C5</div>
+			<div class="container">
+				<div class="row">
+					<div class="channelCard col-3 col-sm-3 col-md-3 col-lg-2 col-xl-1" onclick="gotoChannel('5-1');">
+						<div class="card border-warning">
+						  <div class="imgDiv"><img src="http://www.myschoolofenglish.com/Images/cambridgebutton.png" class="card-img-top" alt="5-1"></div>
+						  <div class="card-footer">
+							<small class="text-muted">TEST 1</small>
+						  </div>
+						</div>
+					</div>
+					<div class="channelCard col-3 col-sm-3 col-md-3 col-lg-2 col-xl-1" onclick="gotoChannel('5-2');">
+						<div class="card border-warning">
+						  <div class="imgDiv"><img src="http://www.myschoolofenglish.com/Images/cambridgebutton.png" class="card-img-top" alt="5-2"></div>
+						  <div class="card-footer">
+							<small class="text-muted">TEST 2</small>
+						  </div>
+						</div>
+					</div>
+					<div class="channelCard col-3 col-sm-3 col-md-3 col-lg-2 col-xl-1" onclick="gotoChannel('5-3');">
+						<div class="card border-warning">
+						  <div class="imgDiv"><img src="http://www.myschoolofenglish.com/Images/cambridgebutton.png" class="card-img-top" alt="5-3"></div>
+						  <div class="card-footer">
+							<small class="text-muted">TEST 3</small>
+						  </div>
+						</div>
+					</div>
+					<div class="channelCard col-3 col-sm-3 col-md-3 col-lg-2 col-xl-1" onclick="gotoChannel('5-4');">
+						<div class="card border-warning">
+						  <div class="imgDiv"><img src="http://www.myschoolofenglish.com/Images/cambridgebutton.png" class="card-img-top" alt="5-4"></div>
+						  <div class="card-footer">
+							<small class="text-muted">TEST 4</small>
+						  </div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="section2" class="section">    
+			<div class="section1-header section-headers">C6</div>
+			<div class="container">
+				<div class="row">
+					<div class="channelCard col-3 col-sm-3 col-md-3 col-lg-2 col-xl-1" onclick="gotoChannel('6-1');">
+						<div class="card border-warning">
+						  <div class="imgDiv"><img src="http://www.myschoolofenglish.com/Images/cambridgebutton.png" class="card-img-top" alt="6-1"></div>
+						  <div class="card-footer">
+							<small class="text-muted">TEST 1</small>
+						  </div>
+						</div>
+					</div>
+					<div class="channelCard col-3 col-sm-3 col-md-3 col-lg-2 col-xl-1" onclick="gotoChannel('6-2');">
+						<div class="card border-warning">
+						  <div class="imgDiv"><img src="http://www.myschoolofenglish.com/Images/cambridgebutton.png" class="card-img-top" alt="6-2"></div>
+						  <div class="card-footer">
+							<small class="text-muted">TEST 2</small>
+						  </div>
+						</div>
+					</div>
+					<div class="channelCard col-3 col-sm-3 col-md-3 col-lg-2 col-xl-1" onclick="gotoChannel('6-3');">
+						<div class="card border-warning">
+						  <div class="imgDiv"><img src="http://www.myschoolofenglish.com/Images/cambridgebutton.png" class="card-img-top" alt="6-3"></div>
+						  <div class="card-footer">
+							<small class="text-muted">TEST 3</small>
+						  </div>
+						</div>
+					</div>
+					<div class="channelCard col-3 col-sm-3 col-md-3 col-lg-2 col-xl-1" onclick="gotoChannel('6-4');">
+						<div class="card border-warning">
+						  <div class="imgDiv"><img src="http://www.myschoolofenglish.com/Images/cambridgebutton.png" class="card-img-top" alt="6-4"></div>
+						  <div class="card-footer">
+							<small class="text-muted">TEST 4</small>
+						  </div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="section3" class="section">    
+			<div class="section1-header section-headers">C7</div>
+			<div class="container">
+				<div class="row">
+					<div class="channelCard col-3 col-sm-3 col-md-3 col-lg-2 col-xl-1" onclick="gotoChannel('7-1');">
+						<div class="card border-warning">
+						  <div class="imgDiv"><img src="http://www.myschoolofenglish.com/Images/cambridgebutton.png" class="card-img-top" alt="7-1"></div>
+						  <div class="card-footer">
+							<small class="text-muted">TEST 1</small>
+						  </div>
+						</div>
+					</div>
+					<div class="channelCard col-3 col-sm-3 col-md-3 col-lg-2 col-xl-1" onclick="gotoChannel('7-2');">
+						<div class="card border-warning">
+						  <div class="imgDiv"><img src="http://www.myschoolofenglish.com/Images/cambridgebutton.png" class="card-img-top" alt="7-2"></div>
+						  <div class="card-footer">
+							<small class="text-muted">TEST 2</small>
+						  </div>
+						</div>
+					</div>
+					<div class="channelCard col-3 col-sm-3 col-md-3 col-lg-2 col-xl-1" onclick="gotoChannel('7-3');">
+						<div class="card border-warning">
+						  <div class="imgDiv"><img src="http://www.myschoolofenglish.com/Images/cambridgebutton.png" class="card-img-top" alt="7-3"></div>
+						  <div class="card-footer">
+							<small class="text-muted">TEST 3</small>
+						  </div>
+						</div>
+					</div>
+					<div class="channelCard col-3 col-sm-3 col-md-3 col-lg-2 col-xl-1" onclick="gotoChannel('7-4');">
+						<div class="card border-warning">
+						  <div class="imgDiv"><img src="http://www.myschoolofenglish.com/Images/cambridgebutton.png" class="card-img-top" alt="7-4"></div>
+						  <div class="card-footer">
+							<small class="text-muted">TEST 4</small>
+						  </div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="section4" class="section">    
+			<div class="section1-header section-headers">C8</div>
+			<div class="container">
+				<div class="row">
+					<div class="channelCard col-3 col-sm-3 col-md-3 col-lg-2 col-xl-1" onclick="gotoChannel('8-1');">
+						<div class="card border-warning">
+						  <div class="imgDiv"><img src="http://www.myschoolofenglish.com/Images/cambridgebutton.png" class="card-img-top" alt="8-1"></div>
+						  <div class="card-footer">
+							<small class="text-muted">TEST 1</small>
+						  </div>
+						</div>
+					</div>
+					<div class="channelCard col-3 col-sm-3 col-md-3 col-lg-2 col-xl-1" onclick="gotoChannel('8-2');">
+						<div class="card border-warning">
+						  <div class="imgDiv"><img src="http://www.myschoolofenglish.com/Images/cambridgebutton.png" class="card-img-top" alt="8-2"></div>
+						  <div class="card-footer">
+							<small class="text-muted">TEST 2</small>
+						  </div>
+						</div>
+					</div>
+					<div class="channelCard col-3 col-sm-3 col-md-3 col-lg-2 col-xl-1" onclick="gotoChannel('8-3');">
+						<div class="card border-warning">
+						  <div class="imgDiv"><img src="http://www.myschoolofenglish.com/Images/cambridgebutton.png" class="card-img-top" alt="8-3"></div>
+						  <div class="card-footer">
+							<small class="text-muted">TEST 3</small>
+						  </div>
+						</div>
+					</div>
+					<div class="channelCard col-3 col-sm-3 col-md-3 col-lg-2 col-xl-1" onclick="gotoChannel('8-4');">
+						<div class="card border-warning">
+						  <div class="imgDiv"><img src="http://www.myschoolofenglish.com/Images/cambridgebutton.png" class="card-img-top" alt="8-4"></div>
+						  <div class="card-footer">
+							<small class="text-muted">TEST 4</small>
+						  </div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="section5" class="section">    
+			<div class="section1-header section-headers">C9</div>
+			<div class="container">
+				<div class="row">
+					<div class="channelCard col-3 col-sm-3 col-md-3 col-lg-2 col-xl-1" onclick="gotoChannel('9-1');">
+						<div class="card border-warning">
+						  <div class="imgDiv"><img src="http://www.myschoolofenglish.com/Images/cambridgebutton.png" class="card-img-top" alt="9-1"></div>
+						  <div class="card-footer">
+							<small class="text-muted">TEST 1</small>
+						  </div>
+						</div>
+					</div>
+					<div class="channelCard col-3 col-sm-3 col-md-3 col-lg-2 col-xl-1" onclick="gotoChannel('9-2');">
+						<div class="card border-warning">
+						  <div class="imgDiv"><img src="http://www.myschoolofenglish.com/Images/cambridgebutton.png" class="card-img-top" alt="9-2"></div>
+						  <div class="card-footer">
+							<small class="text-muted">TEST 2</small>
+						  </div>
+						</div>
+					</div>
+					<div class="channelCard col-3 col-sm-3 col-md-3 col-lg-2 col-xl-1" onclick="gotoChannel('9-3');">
+						<div class="card border-warning">
+						  <div class="imgDiv"><img src="http://www.myschoolofenglish.com/Images/cambridgebutton.png" class="card-img-top" alt="9-3"></div>
+						  <div class="card-footer">
+							<small class="text-muted">TEST 3</small>
+						  </div>
+						</div>
+					</div>
+					<div class="channelCard col-3 col-sm-3 col-md-3 col-lg-2 col-xl-1" onclick="gotoChannel('9-4');">
+						<div class="card border-warning">
+						  <div class="imgDiv"><img src="http://www.myschoolofenglish.com/Images/cambridgebutton.png" class="card-img-top" alt="9-4"></div>
+						  <div class="card-footer">
+							<small class="text-muted">TEST 4</small>
+						  </div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="section6" class="section">    
+			<div class="section1-header section-headers">C10</div>
+			<div class="container">
+				<div class="row">
+					<div class="channelCard col-3 col-sm-3 col-md-3 col-lg-2 col-xl-1" onclick="gotoChannel('10-1');">
+						<div class="card border-warning">
+						  <div class="imgDiv"><img src="http://www.myschoolofenglish.com/Images/cambridgebutton.png" class="card-img-top" alt="10-1"></div>
+						  <div class="card-footer">
+							<small class="text-muted">TEST 1</small>
+						  </div>
+						</div>
+					</div>
+					<div class="channelCard col-3 col-sm-3 col-md-3 col-lg-2 col-xl-1" onclick="gotoChannel('10-2');">
+						<div class="card border-warning">
+						  <div class="imgDiv"><img src="http://www.myschoolofenglish.com/Images/cambridgebutton.png" class="card-img-top" alt="10-2"></div>
+						  <div class="card-footer">
+							<small class="text-muted">TEST 2</small>
+						  </div>
+						</div>
+					</div>
+					<div class="channelCard col-3 col-sm-3 col-md-3 col-lg-2 col-xl-1" onclick="gotoChannel('10-3');">
+						<div class="card border-warning">
+						  <div class="imgDiv"><img src="http://www.myschoolofenglish.com/Images/cambridgebutton.png" class="card-img-top" alt="10-3"></div>
+						  <div class="card-footer">
+							<small class="text-muted">TEST 3</small>
+						  </div>
+						</div>
+					</div>
+					<div class="channelCard col-3 col-sm-3 col-md-3 col-lg-2 col-xl-1" onclick="gotoChannel('10-4');">
+						<div class="card border-warning">
+						  <div class="imgDiv"><img src="http://www.myschoolofenglish.com/Images/cambridgebutton.png" class="card-img-top" alt="10-4"></div>
+						  <div class="card-footer">
+							<small class="text-muted">TEST 4</small>
+						  </div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="section6" class="section">    
+			<div class="section1-header section-headers">C10</div>
+			<div class="container">
+				<div class="row">
+					<div class="channelCard col-3 col-sm-3 col-md-3 col-lg-2 col-xl-1" onclick="gotoChannel('10-1');">
+						<div class="card border-warning">
+						  <div class="imgDiv"><img src="http://www.myschoolofenglish.com/Images/cambridgebutton.png" class="card-img-top" alt="10-1"></div>
+						  <div class="card-footer">
+							<small class="text-muted">TEST 1</small>
+						  </div>
+						</div>
+					</div>
+					<div class="channelCard col-3 col-sm-3 col-md-3 col-lg-2 col-xl-1" onclick="gotoChannel('10-2');">
+						<div class="card border-warning">
+						  <div class="imgDiv"><img src="http://www.myschoolofenglish.com/Images/cambridgebutton.png" class="card-img-top" alt="10-2"></div>
+						  <div class="card-footer">
+							<small class="text-muted">TEST 2</small>
+						  </div>
+						</div>
+					</div>
+					<div class="channelCard col-3 col-sm-3 col-md-3 col-lg-2 col-xl-1" onclick="gotoChannel('10-3');">
+						<div class="card border-warning">
+						  <div class="imgDiv"><img src="http://www.myschoolofenglish.com/Images/cambridgebutton.png" class="card-img-top" alt="10-3"></div>
+						  <div class="card-footer">
+							<small class="text-muted">TEST 3</small>
+						  </div>
+						</div>
+					</div>
+					<div class="channelCard col-3 col-sm-3 col-md-3 col-lg-2 col-xl-1" onclick="gotoChannel('10-4');">
+						<div class="card border-warning">
+						  <div class="imgDiv"><img src="http://www.myschoolofenglish.com/Images/cambridgebutton.png" class="card-img-top" alt="10-4"></div>
+						  <div class="card-footer">
+							<small class="text-muted">TEST 4</small>
+						  </div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="section7" class="section">    
+			<div class="section1-header section-headers">C11</div>
+			<div class="container">
+				<div class="row">
+					<div class="channelCard col-3 col-sm-3 col-md-3 col-lg-2 col-xl-1" onclick="gotoChannel('11-1');">
+						<div class="card border-warning">
+						  <div class="imgDiv"><img src="http://www.myschoolofenglish.com/Images/cambridgebutton.png" class="card-img-top" alt="11-1"></div>
+						  <div class="card-footer">
+							<small class="text-muted">TEST 1</small>
+						  </div>
+						</div>
+					</div>
+					<div class="channelCard col-3 col-sm-3 col-md-3 col-lg-2 col-xl-1" onclick="gotoChannel('11-2');">
+						<div class="card border-warning">
+						  <div class="imgDiv"><img src="http://www.myschoolofenglish.com/Images/cambridgebutton.png" class="card-img-top" alt="11-2"></div>
+						  <div class="card-footer">
+							<small class="text-muted">TEST 2</small>
+						  </div>
+						</div>
+					</div>
+					<div class="channelCard col-3 col-sm-3 col-md-3 col-lg-2 col-xl-1" onclick="gotoChannel('11-3');">
+						<div class="card border-warning">
+						  <div class="imgDiv"><img src="http://www.myschoolofenglish.com/Images/cambridgebutton.png" class="card-img-top" alt="11-3"></div>
+						  <div class="card-footer">
+							<small class="text-muted">TEST 3</small>
+						  </div>
+						</div>
+					</div>
+					<div class="channelCard col-3 col-sm-3 col-md-3 col-lg-2 col-xl-1" onclick="gotoChannel('11-4');">
+						<div class="card border-warning">
+						  <div class="imgDiv"><img src="http://www.myschoolofenglish.com/Images/cambridgebutton.png" class="card-img-top" alt="11-4"></div>
+						  <div class="card-footer">
+							<small class="text-muted">TEST 4</small>
+						  </div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="section8" class="section">    
+			<div class="section1-header section-headers">C12</div>
+			<div class="container">
+				<div class="row">
+					<div class="channelCard col-3 col-sm-3 col-md-3 col-lg-2 col-xl-1" onclick="gotoChannel('12-1');">
+						<div class="card border-warning">
+						  <div class="imgDiv"><img src="http://www.myschoolofenglish.com/Images/cambridgebutton.png" class="card-img-top" alt="12-1"></div>
+						  <div class="card-footer">
+							<small class="text-muted">TEST 1</small>
+						  </div>
+						</div>
+					</div>
+					<div class="channelCard col-3 col-sm-3 col-md-3 col-lg-2 col-xl-1" onclick="gotoChannel('12-2');">
+						<div class="card border-warning">
+						  <div class="imgDiv"><img src="http://www.myschoolofenglish.com/Images/cambridgebutton.png" class="card-img-top" alt="12-2"></div>
+						  <div class="card-footer">
+							<small class="text-muted">TEST 2</small>
+						  </div>
+						</div>
+					</div>
+					<div class="channelCard col-3 col-sm-3 col-md-3 col-lg-2 col-xl-1" onclick="gotoChannel('12-3');">
+						<div class="card border-warning">
+						  <div class="imgDiv"><img src="http://www.myschoolofenglish.com/Images/cambridgebutton.png" class="card-img-top" alt="12-3"></div>
+						  <div class="card-footer">
+							<small class="text-muted">TEST 3</small>
+						  </div>
+						</div>
+					</div>
+					<div class="channelCard col-3 col-sm-3 col-md-3 col-lg-2 col-xl-1" onclick="gotoChannel('12-4');">
+						<div class="card border-warning">
+						  <div class="imgDiv"><img src="http://www.myschoolofenglish.com/Images/cambridgebutton.png" class="card-img-top" alt="12-4"></div>
+						  <div class="card-footer">
+							<small class="text-muted">TEST 4</small>
+						  </div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="section9" class="section">    
+			<div class="section1-header section-headers">C13</div>
+			<div class="container">
+				<div class="row">
+					<div class="channelCard col-3 col-sm-3 col-md-3 col-lg-2 col-xl-1" onclick="gotoChannel('13-1');">
+						<div class="card border-warning">
+						  <div class="imgDiv"><img src="http://www.myschoolofenglish.com/Images/cambridgebutton.png" class="card-img-top" alt="13-1"></div>
+						  <div class="card-footer">
+							<small class="text-muted">TEST 1</small>
+						  </div>
+						</div>
+					</div>
+					<div class="channelCard col-3 col-sm-3 col-md-3 col-lg-2 col-xl-1" onclick="gotoChannel('13-2');">
+						<div class="card border-warning">
+						  <div class="imgDiv"><img src="http://www.myschoolofenglish.com/Images/cambridgebutton.png" class="card-img-top" alt="13-2"></div>
+						  <div class="card-footer">
+							<small class="text-muted">TEST 2</small>
+						  </div>
+						</div>
+					</div>
+					<div class="channelCard col-3 col-sm-3 col-md-3 col-lg-2 col-xl-1" onclick="gotoChannel('13-3');">
+						<div class="card border-warning">
+						  <div class="imgDiv"><img src="http://www.myschoolofenglish.com/Images/cambridgebutton.png" class="card-img-top" alt="13-3"></div>
+						  <div class="card-footer">
+							<small class="text-muted">TEST 3</small>
+						  </div>
+						</div>
+					</div>
+					<div class="channelCard col-3 col-sm-3 col-md-3 col-lg-2 col-xl-1" onclick="gotoChannel('13-4');">
+						<div class="card border-warning">
+						  <div class="imgDiv"><img src="http://www.myschoolofenglish.com/Images/cambridgebutton.png" class="card-img-top" alt="13-4"></div>
+						  <div class="card-footer">
+							<small class="text-muted">TEST 4</small>
+						  </div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="section10" class="section">    
+			<div class="section1-header section-headers">C14</div>
+			<div class="container">
+				<div class="row">
+					<div class="channelCard col-3 col-sm-3 col-md-3 col-lg-2 col-xl-1" onclick="gotoChannel('14-1');">
+						<div class="card border-warning">
+						  <div class="imgDiv"><img src="http://www.myschoolofenglish.com/Images/cambridgebutton.png" class="card-img-top" alt="14-1"></div>
+						  <div class="card-footer">
+							<small class="text-muted">TEST 1</small>
+						  </div>
+						</div>
+					</div>
+					<div class="channelCard col-3 col-sm-3 col-md-3 col-lg-2 col-xl-1" onclick="gotoChannel('14-2');">
+						<div class="card border-warning">
+						  <div class="imgDiv"><img src="http://www.myschoolofenglish.com/Images/cambridgebutton.png" class="card-img-top" alt="14-2"></div>
+						  <div class="card-footer">
+							<small class="text-muted">TEST 2</small>
+						  </div>
+						</div>
+					</div>
+					<div class="channelCard col-3 col-sm-3 col-md-3 col-lg-2 col-xl-1" onclick="gotoChannel('14-3');">
+						<div class="card border-warning">
+						  <div class="imgDiv"><img src="http://www.myschoolofenglish.com/Images/cambridgebutton.png" class="card-img-top" alt="14-3"></div>
+						  <div class="card-footer">
+							<small class="text-muted">TEST 3</small>
+						  </div>
+						</div>
+					</div>
+					<div class="channelCard col-3 col-sm-3 col-md-3 col-lg-2 col-xl-1" onclick="gotoChannel('14-4');">
+						<div class="card border-warning">
+						  <div class="imgDiv"><img src="http://www.myschoolofenglish.com/Images/cambridgebutton.png" class="card-img-top" alt="14-4"></div>
+						  <div class="card-footer">
+							<small class="text-muted">TEST 4</small>
+						  </div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<nav class="navbar fixed-bottom navbar-dark bg-dark">
+		<audio id="audioPlayer" style="width: 100vw; height: 100%;">
+			<source id="audioSrc" src="" type="audio/mp3"/>
+		</audio>
+		<div class="btn-group btn-block" role="group">
+			<button class="btn btn-secondary my-2 my-sm-0" type="button" onclick="play()">></button>
+			<button class="btn btn-secondary my-2 my-sm-0" type="button" onclick="pause()">||</button>
+			<button class="btn btn-secondary my-2 my-sm-0" type="button" onclick="minus10()"><< 10</button>
+			<button class="btn btn-secondary my-2 my-sm-0" type="button" onclick="add10()">>> 10</button>
+			<button class="btn btn-light my-2 my-sm-0" type="button" id="duration">-- / --</button>
+		</div>
+	</nav>
+	
+</body>
+<script>
+var audioTimer;
+function gotoChannel(url) {
+	var Vplayer = document.getElementById("audioPlayer");
+	var VplayerSrc = document.getElementById("audioSrc");
+	VplayerSrc.src = "./" + url + ".mp3";
+	Vplayer.load();
+	
+	clearInterval(audioTimer);
+	audioTimer = setInterval(function(){
+		document.getElementById("duration").innerhtml = formatSecond(Vplayer.currentTime) + "/" + formatSecond(Vplayer.duration);
+	}, 1000);
+}
+
+function play() {
+	var Vplayer = document.getElementById("audioPlayer");
+	Vplayer.play();
+}
+
+function pause() {
+	var Vplayer = document.getElementById("audioPlayer");
+	Vplayer.pause();
+}
+
+function add10() {
+	var Vplayer = document.getElementById("audioPlayer");
+	Vplayer.currentTime += 10;
+}
+
+function minus10() {
+	var Vplayer = document.getElementById("audioPlayer");
+	Vplayer.currentTime -= 10;
+}
+
+function formatSecond(secs) {          
+	var hr = Math.floor(secs / 3600);
+	var min = Math.floor((secs - (hr * 3600)) / 60);
+	var sec = parseInt( secs - (hr * 3600) - (min * 60));
+	if (min < 10) {
+		min = '0' + min;
+	}
+	if (sec < 10) {
+		sec = '0' + sec;
+	}
+	if (hr) {
+		return hr + ':' + min + ':' + sec;
+	}
+	
+	return min + ':' + sec;
+}
+</script>
 </html>
