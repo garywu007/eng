@@ -554,7 +554,7 @@ function gotoChannel(url) {
 	
 	clearInterval(audioTimer);
 	audioTimer = setInterval(function(){
-		document.getElementById("duration").innerhtml = formatSecond(Vplayer.currentTime) + "/" + formatSecond(Vplayer.duration);
+		document.getElementById("duration").innerHTML = formatSecond(Vplayer.currentTime) + "/" + formatSecond(Vplayer.duration);
 	}, 1000);
 }
 
