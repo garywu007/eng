@@ -549,7 +549,7 @@ var audioTimer;
 function gotoChannel(url) {
 	var Vplayer = document.getElementById("audioPlayer");
 	var VplayerSrc = document.getElementById("audioSrc");
-	VplayerSrc.src = "./" + url + ".mp3";
+	VplayerSrc.src = "https://github.com/garywu007/eng/raw/master/" + url + ".mp3";
 	Vplayer.load();
 	
 	clearInterval(audioTimer);
