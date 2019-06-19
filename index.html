@@ -105,7 +105,7 @@
 			<div class="section1-header section-headers">C5</div>
 			<div class="container">
 				<div class="row">
-					<div class="channelCard col-3 col-sm-3 col-md-3 col-lg-2 col-xl-1" onclick="gotoChannel('5-1');">
+					<div class="channelCard col-3 col-sm-3 col-md-3 col-lg-2 col-xl-1" onclick="gotoChannel('c5-1');">
 						<div class="card border-warning">
 						  <div class="imgDiv"><img src="http://www.myschoolofenglish.com/Images/cambridgebutton.png" class="card-img-top" alt="5-1"></div>
 						  <div class="card-footer">
@@ -113,7 +113,7 @@
 						  </div>
 						</div>
 					</div>
-					<div class="channelCard col-3 col-sm-3 col-md-3 col-lg-2 col-xl-1" onclick="gotoChannel('5-2');">
+					<div class="channelCard col-3 col-sm-3 col-md-3 col-lg-2 col-xl-1" onclick="gotoChannel('c5-2');">
 						<div class="card border-warning">
 						  <div class="imgDiv"><img src="http://www.myschoolofenglish.com/Images/cambridgebutton.png" class="card-img-top" alt="5-2"></div>
 						  <div class="card-footer">
@@ -121,7 +121,7 @@
 						  </div>
 						</div>
 					</div>
-					<div class="channelCard col-3 col-sm-3 col-md-3 col-lg-2 col-xl-1" onclick="gotoChannel('5-3');">
+					<div class="channelCard col-3 col-sm-3 col-md-3 col-lg-2 col-xl-1" onclick="gotoChannel('c5-3');">
 						<div class="card border-warning">
 						  <div class="imgDiv"><img src="http://www.myschoolofenglish.com/Images/cambridgebutton.png" class="card-img-top" alt="5-3"></div>
 						  <div class="card-footer">
@@ -129,7 +129,7 @@
 						  </div>
 						</div>
 					</div>
-					<div class="channelCard col-3 col-sm-3 col-md-3 col-lg-2 col-xl-1" onclick="gotoChannel('5-4');">
+					<div class="channelCard col-3 col-sm-3 col-md-3 col-lg-2 col-xl-1" onclick="gotoChannel('c5-4');">
 						<div class="card border-warning">
 						  <div class="imgDiv"><img src="http://www.myschoolofenglish.com/Images/cambridgebutton.png" class="card-img-top" alt="5-4"></div>
 						  <div class="card-footer">
@@ -550,7 +550,7 @@ var audioTimer;
 function gotoChannel(url) {
 	var Vplayer = document.getElementById("audioPlayer");
 	var VplayerSrc = document.getElementById("audioSrc");
-	VplayerSrc.src = "https://github.com/garywu007/eng/raw/master/" + url + ".mp3";
+	VplayerSrc.src = "./" + url + ".mp3";
 	Vplayer.load();
 	
 	clearInterval(audioTimer);
